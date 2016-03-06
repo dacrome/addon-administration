@@ -3,8 +3,8 @@ packaging:
     - target/addon-administration-${project.version}
     - target/dependency/osiam.war
 
-links:
-  - postgres
+volumes:
+  /var/lib/osiam/data: target/data
 
 ports:
   - 8380

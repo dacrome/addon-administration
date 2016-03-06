@@ -190,16 +190,8 @@
         </dependency>
 
         <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>2.52.0</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.4.1208.jre7</version>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -349,6 +341,7 @@
                 <testResources>
                     <testResource>
                         <directory>src/integrationtest/resources</directory>
+                        <filtering>true</filtering>
                     </testResource>
                 </testResources>
                 <plugins>
@@ -433,6 +426,9 @@
                         <version>2.19.1</version>
                         <configuration>
                             <trimStackTrace>false</trimStackTrace>
+                            <systemProperties>
+                                <project.build.directory>${project.build.directory}</project.build.directory>
+                            </systemProperties>
                         </configuration>
                         <executions>
                             <execution>

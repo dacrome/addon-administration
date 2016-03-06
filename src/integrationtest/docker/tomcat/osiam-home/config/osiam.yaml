@@ -6,16 +6,10 @@ osiam:
   db:
 
     #
-    # PostgreSQL
+    # H2
     #
-    vendor: postgresql
-    driver: org.postgresql.Driver
-    url: jdbc:postgresql://postgres:5432/osiam
+    vendor: h2
+    driver: org.h2.Driver
+    url: jdbc:h2:${osiam.home}/data/osiam;AUTO_SERVER=TRUE
     username: osiam
     password: osiam
-
-  #
-  # LDAP configuration
-  #
-  ldap:
-    enabled: false

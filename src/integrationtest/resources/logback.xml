@@ -5,7 +5,7 @@
         </encoder>
     </appender>
 
-    <logger name="org.dbunit" level="ERROR"/>
+    <logger name="org.dbunit" level="INFO"/>
     <logger name="org.osiam.bundled.org.apache.http" level="WARN"/>
     <logger name="ch.qos.logback" level="ERROR"/>
 
